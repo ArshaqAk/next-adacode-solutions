@@ -1,0 +1,62 @@
+.simple-carousel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    .card{
+      width: 17rem;
+      min-height: 9rem;
+      border: 1px solid gray;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 0.7rem;
+      border-radius: 10px ;
+      .user{
+          margin-block: 0.6rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          h2{
+              margin-inline: 0.5rem;
+              font-size: 1rem;
+          }
+          .icon{
+              width: 25px;
+              height: 25px;
+          }
+      }
+      .feedback_text{
+  
+          .review_text{
+              text-align: justify;
+              font-size:0.9rem;
+          }
+          .star{
+              display: flex;
+              justify-content: center;
+              margin-top: 0.4rem;
+          }
+  
+      }
+  }
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    margin-right: 20px; 
+    scroll-snap-align: start; 
+    transition: transform 1s ease; 
+  }
+  .carousel-item.active {
+    transform: scale(1.1); 
+  }
+  
+
+  @media screen and (max-width:850px) {
+    .simple-carousel{
+      display: flex;
+      flex-direction: column;
+    }
+    
+  }

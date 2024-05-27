@@ -1,0 +1,58 @@
+.drawer_button {
+  border: none;
+  padding: 1rem;
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+}
+
+.mobile_nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background-color: var(--primary-color);
+  color: white;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0.5rem;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mobile_dawer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: white;
+  height: 100vh;
+
+  ul>li {
+    list-style: none;
+    padding: 1rem 1rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        border-bottom: 1px solid white;
+        transition: ease-in-out 0.2s;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

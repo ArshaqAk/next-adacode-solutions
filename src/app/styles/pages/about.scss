@@ -1,0 +1,47 @@
+.about_container {
+  padding: 0 10vmax 0rem 10vmax;
+  display: flex;
+  justify-content: center;
+
+  .about_wrapper {
+    text-align: center;
+    padding: 1rem;
+
+    h1 {
+      color: var(--heading-color);
+      font-size: 2rem;
+
+      span {
+        color: var(--secondary-color);
+        font-size: 2rem;
+      }
+    }
+
+    .vision_wrapper {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 3rem;
+      border-radius: 10px;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .card_contianer {
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+.about_container{
+  padding: 0 5vmax 0rem 5vmax;
+
+}
+}

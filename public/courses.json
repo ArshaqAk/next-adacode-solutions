@@ -1,0 +1,71 @@
+{
+  "courses": [
+    {
+      "title": "Robotics",
+      "imgUrl": "https://futureskillsprime.in/sites/default/files/inline-images/iStock-966248982.jpg",
+      "filename": "robotics",
+      "description": "Explore the world of robotics with a comprehensive course covering the fundamentals of robotic systems, sensors, actuators, and programming techniques. Develop hands-on skills to design and build your own robots for various applications."
+    },
+    {
+      "title": "Embedded Systems & IoT",
+      "imgUrl": "https://images.prismic.io//intuzwebsite/21a68fa0-00a6-4513-95a4-d06900a4c3dd_Frame+14443%402x.png?w=2400&q=80&auto=format,compress&fm=png8",
+      "filename": "embedded",
+      "description": "Dive into the world of embedded systems, exploring the design and implementation of computer systems integrated into devices for real-world applications. Learn about hardware-software interaction and gain practical skills in developing embedded solutions."
+    },
+    {
+      "title": "Cloud Computing",
+      "imgUrl": "https://imageio.forbes.com/specials-images/imageserve/642bc7aea9b99c12f3deb166/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+      "filename": "cloudcomputing",
+      "description": "Master the principles of cloud computing and understand how to leverage cloud services for scalable and flexible solutions. Learn about cloud architecture, deployment models, and key cloud providers in the industry."
+    },
+    {
+      "title": "Data Science",
+      "imgUrl": "https://cdn.analyticsvidhya.com/wp-content/uploads/2023/10/data-science.png",
+      "filename": "datascience",
+      "description": "Immerse yourself in the field of data science, covering statistical analysis, machine learning, and data visualization. Gain hands-on experience with data manipulation and analysis tools to extract valuable insights from datasets."
+    },
+    {
+      "title": "Python Full Stack",
+      "imgUrl": "https://www.educative.io/v2api/editorpage/5896473996165120/image/6461289576005632",
+      "filename": "python",
+      "description": "Become proficient in full-stack web development using Python. Learn to build dynamic and interactive web applications using popular frameworks like Django or Flask for the backend and front-end technologies for the user interface."
+    },
+    {
+      "title": "Java Full Stack",
+      "imgUrl": "https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/blogs/Blog-115/Java_FS_Image1.jpg",
+      "filename": "java",
+      "description": "Explore full-stack development with Java, covering both backend and frontend technologies. Build scalable and robust web applications using Java frameworks like Spring Boot for the backend and modern frontend frameworks for the user interface."
+    },
+    {
+      "title": "MERN Stack",
+      "imgUrl": "https://nitsantech.com/fileadmin/ns_theme_ns2019/blog/_live/What_is_the_MERN_stack_and_how_do_I_use_it_/What_is_the_MERN_stack_and_how_do_I_use_it.jpg",
+      "filename": "mernstack",
+      "description": "Master the art of fullstack web development using the MERN stack (MongoDB, Express.js, React.js, Node.js). Dive into database design, server-side scripting, client-side development, and deployment strategies to build scalable and efficient web applications."
+    },
+    {
+      "title": "React Native",
+      "imgUrl": "https://miro.medium.com/v2/resize:fit:700/1*C3kxjCrJy-aWSMpe2chfaA.png",
+      "filename": "reactnative",
+      "description": "Learn to develop cross-platform mobile applications using React Native. Gain expertise in building native-like experiences for both iOS and Android platforms using a single codebase. Explore UI components, navigation, and integration with backend services."
+    },
+    {
+      "title": "Flutter",
+      "imgUrl": "data:image/png;base64,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",
+      "filename": "flutter",
+      "description": "Delve into Flutter, Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. Develop skills in creating beautiful and responsive user interfaces, managing state, and integrating Flutter applications with backend services."
+    },
+    {
+      "title": "Cyber Security",
+      "imgUrl": "https://s3.amazonaws.com/brt.org/lock-technology-cybersecurity-header.jpg",
+      "filename": "cybersecurity",
+      "description": "Understanding the CIA triad (Confidentiality,Integrity, Availability) Common cyber security terminologies and definitions Overview of cyber security frameworks and standards "
+    },
+    {
+      "title": "Ethical Hacking",
+      "imgUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/ethical-hackers-for-businesses-article.jpg",
+      "filename": "ethicalhacking",
+      "description": "Training in cybersecurity techniques,including penetration testing,vulnerability assessment,and ethical hacking methodologies,to equip them with the skills necessary to identify and address security weaknesses within systems and networks in an ethical and responsible manner"
+    }
+
+  ]
+}

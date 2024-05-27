@@ -1,0 +1,19 @@
+.not_found_contianer {
+  @include flex-center;
+  height: 80vh;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+
+  h1 {
+    color: var(--primary-color);
+
+    span {
+      color: var(--secondary-color);
+    }
+  }
+
+  p {
+    color: var(--heading-color)
+  }
+}

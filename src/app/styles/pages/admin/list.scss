@@ -1,0 +1,55 @@
+.studentlist_container {
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+}
+
+.table_icons_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.phone-icon {
+  color: darkblue;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.whatsapp-icon {
+  color: darkgreen;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.delete-icon {
+  color: red;
+  padding: 4px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+@media screen and (max-width:1220px) {
+  .studentlist_container {
+    margin-top: 10vmax;
+  }
+}

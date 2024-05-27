@@ -1,0 +1,16 @@
+{
+  "reviews": [
+    {
+      "username": "Abhinav",
+      "qualification": "Student at Adacode",
+      "imgUrl": "https://images.pexels.com/photos/4295983/pexels-photo-4295983.jpeg",
+      "review": "Absolutely loved the Data Science course at ADACODE Solution! 🚀 The curriculum is super engaging, instructors are top-notch, and the hands-on projects make learning a breeze. 🌐💡 Excited to apply my newfound skills in the real world! 🌟 #DataScienceJourney 📊👩‍💻"
+    },
+    {
+      "username": "Deepak",
+      "qualification": "Student at Adacode",
+      "imgUrl": "https://images.pexels.com/photos/7562139/pexels-photo-7562139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "review": "Absolutely thrilled with my Python learning journey at ADACODE Solution! 🐍 The course curriculum is brilliantly designed, making Python accessible and enjoyable. excited to embark on new coding adventures in the real world! 💻🌐 #PythonMagic #CodingAdventure"
+    }
+  ]
+}

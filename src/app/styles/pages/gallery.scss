@@ -1,0 +1,24 @@
+.gallary_container {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: var(--heading-color);
+    text-align: center;
+    padding-bottom: 1rem;
+
+    span {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.gallary_card_wrapper {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}

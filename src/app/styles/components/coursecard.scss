@@ -1,0 +1,55 @@
+ .course_card_contianer {
+   background-color: var(--primary-color);
+   width: 17rem;
+   color: white;
+   display: flex;
+   height: 22rem;
+   align-items: center;
+   flex-direction: column;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   gap: 0.2rem;
+   padding: 1rem;
+   max-height: 24rem;
+   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.450);
+   transition: transform 0.3s ease-in-out;
+   border-radius: 10px;
+
+   img {
+     max-inline-size: 100%;
+     border-radius: 10px;
+     block-size: auto;
+     aspect-ratio: 2/1;
+   }
+
+   &:hover {
+     transform: translateY(-5px);
+   }
+
+   h3 {
+     text-align: center;
+     text-overflow: ellipsis;
+   }
+
+   p {
+     text-align: center;
+     text-overflow: ellipsis;
+     overflow-y: auto;
+     font-size: 0.9rem;
+   }
+
+   button {
+     margin-top: 1rem;
+   }
+
+   .course_logo {
+     border: 2px dotted white;
+     padding: 1rem;
+     border-radius: 100px;
+   }
+ }
+
+ @media screen and (max-width: 480px) {
+.course_card_contianer{
+  width: 15rem;
+}
+}

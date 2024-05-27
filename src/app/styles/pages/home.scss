@@ -1,0 +1,151 @@
+.hero_contianer {
+  height:90vh;
+  // @include flex-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 0 10vmax 2rem 10vmax;
+  color: white;
+
+  .button_enroll {
+    padding: 1rem;
+    border-radius: 7px;
+    background-color: #D20B31;
+    text-align: center;
+    font-weight: bold;
+    color: var(--heading-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #DED926;
+    animation: blink 1s infinite;
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .home_section_left {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+
+    h1 {
+      font-size: 3rem;
+    }
+    
+    span {
+      color: #F2A227;
+      font-size: 3rem;
+
+    }
+  }
+
+  .home_section_right {
+  }
+
+  .home_button_wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+  .btn_find_course{
+    text-decoration: none;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero_contianer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 0 2rem;
+    height: auto;
+    .home_section_left {
+      padding-top: 10vh;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+
+      h1 {
+        font-size: 1.9rem;
+        padding: 2rem 0rem 2rem 0rem;
+      }
+
+      p {
+        padding: 2rem 0rem 2rem 0rem;
+        font-size: 1rem;
+      }
+    }
+
+    .home_section_right {
+
+    }
+  }
+}
+
+
+.animated_details {
+  min-height: 20vh;
+  background-color: var(--heading-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    padding: 1rem;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .section_divider {
+    font-size: 100px;
+    font-weight: 1;
+  }
+}
+
+
+@media screen and (max-width:850px) {
+  .animated_details {
+    div>h1 {
+      font-size: 1.4rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 10px;
+      font-size: 10px;
+    }
+
+    .section_divider {
+      color: #ccc;
+    }
+
+  }
+}

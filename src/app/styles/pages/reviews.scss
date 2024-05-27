@@ -1,0 +1,36 @@
+.review_container {
+  min-height: 100vh;
+  @include flex-center;
+  padding: 0 10rem 0 10rem;
+  flex-direction: column;
+
+  h1 {
+    color: var(--heading-color);
+    padding: 4rem 1rem 4rem 1rem;
+  }
+
+  span {
+    color: var(--secondary-color);
+  }
+}
+
+.review_cards_wrapper {
+  @include flex-center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .review_container {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review_container {
+    padding: 2rem 1rem 2rem 1rem;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.login_container {
+  label {
+    font-size: 2rem;
+    color: var(--heading-color)
+  }
+
+  @include flex-center;
+  height:30rem;
+
+  .login_form_wrapper {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  div>input {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color)
+  }
+
+  div>button>a {
+    text-decoration: none;
+    color: black;
+  }
+
+}

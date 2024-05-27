@@ -1,0 +1,86 @@
+.quickfrom_container {
+  height: auto;
+  @include flex-center;
+  flex-direction: column;
+  padding: 4rem 1rem 4rem 4rem;
+
+  h1 {
+    color: #fff;
+    padding-bottom: 1rem;
+  }
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  form {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 25vmax;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    border-radius: 15px;
+
+  }
+  .course_checkbox{
+    color:#ffffffc5;
+    font-weight: 500;
+
+    .checkbox_selector{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      input{
+        margin-inline: 7px;
+        accent-color: var(--secondary-color)!important; 
+      }
+    }
+  }
+
+  form > input {
+    color: #ffffffec;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #0c081871;
+}
+.button{
+    cursor: pointer !important;
+}
+.button:hover{
+    background-color: rgba(186, 199, 199, 0.404) !important;
+    transition: 0.4s;
+}
+
+form > input::placeholder {
+  color: #ffffffcb;
+}
+
+
+  form>button {
+    border: none;
+    color: rgba(255, 255, 255, 0.315);
+    padding: 1rem;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: var(--primary-color);
+      transition: ease-in-out 0.2s;
+    }
+  }
+}
+
+@media screen and (max-width:850px) {
+  .quickfrom_container {
+    padding: 4rem 1rem 4rem 1rem;
+    height: auto;
+
+    form {
+      width: 85vmin;
+      padding: 1rem;
+    }
+  }
+}

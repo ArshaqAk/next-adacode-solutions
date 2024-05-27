@@ -1,0 +1,109 @@
+.faq_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-block-start: 3rem;
+  .faq_box{
+    width: 80%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 26px 0px;
+    // border: 0.2px solid var(--primary-color);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px ;
+    padding-bottom: 4rem;    
+
+  }
+  .faq_header{
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-block: 1.5rem;
+  }
+}
+.freediv{
+  width: 100%;
+  min-height: 5rem;
+}
+.dropdown {
+  position: relative;
+  width: 200px;
+  width: 90%;
+  margin-block: 0.1rem;
+}
+
+.dropdown-btn {
+  background: #ffffff;
+  border: 1px solid var(--primary-color);
+  font-size: 18px;
+  width: 100%;
+  color: #0a0516;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7em 0.5em;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+.dropdown-btn:hover{
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.arrow {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--primary-color);
+  transition: transform ease-in-out 0.3s;
+}
+.dropdown_container{
+  position: relative;
+}
+.arrow:hover{
+  border-top: 6px solid #fff;
+}
+
+.dropdown-content {
+  list-style: none;
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.5em;
+  padding: 0;
+  margin: 0;
+  display: none;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-content.open {
+  display: block;
+}
+
+.dropdown-content li {
+  border-radius: 0.5em;
+}
+
+.dropdown-content li:hover {
+  background: #ffffff;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 0.7em 0.6em;
+  color: #000000;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .freediv{
+    width: 100%;
+    min-height: 14rem;
+  }
+  
+}
+

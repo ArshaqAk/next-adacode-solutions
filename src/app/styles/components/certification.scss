@@ -1,0 +1,137 @@
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  h4 {
+    font-weight: 400;
+  }
+}
+
+.certificates_logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-inline: 3rem;
+  margin-top: 30px;
+  img {
+    margin-inline: 5px;
+  }
+}
+.companies {
+  .company_header {
+    display: flex;
+    justify-content: center;
+    margin-top: 85px;
+    margin-bottom: 25px;
+    h2 {
+      margin: auto;
+      margin-inline: 4px;
+      font-weight: 500;
+      font-size: 25px;
+    }
+  }
+  .company_logo {
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+    justify-content: space-around;
+    gap: 7rem;
+
+    justify-content: center;
+
+    img {
+      margin-inline: 2px;
+      margin-top: 5px;
+    }
+  }
+}
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  p {
+    font-weight: 300;
+  }
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+    opacity: 0.5; /* Add opacity effect at the start */
+}
+10% {
+    opacity: 1; /* Transition to full opacity */
+}
+90% {
+    opacity: 1; /* Maintain full opacity */
+}
+100% {
+    transform: translateX(calc(-150px * 12));
+    opacity: 0.9; /* Add opacity effect at the end */
+}
+}
+
+
+// Styling
+.slider {
+	background: white;
+	// box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: auto;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 60%;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(150px *12);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 160px; 
+    margin-inline: 35px;
+	}
+}
+
+@media screen and (max-width:960px) {
+  
+.slider{
+  width: 90%;
+  .slide {
+		height: 100px;
+		width: 260px; 
+    margin-inline: 8px;
+	}
+
+}
+
+}
