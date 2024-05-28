@@ -6,15 +6,24 @@ import { getDocs, collection, query, orderBy } from "firebase/firestore";
 import List from "../list/page";
 
 interface StudentDataProps {
+
   studentname: string;
   phonenumber: string;
   isCalled: boolean;
   createdAt: string | number;
 }
 
+
 function StudentList() {
   //@ts-ignore
-  const [studentList, setStudentList] = useState<StudentDataProps[]>([]);
+  const [studentList, setStudentList] = useState<StudentDataProps[]>([
+    {
+      studentname:'arshaq',
+      phonenumber:'9123562120',
+      isCalled:true,
+      createdAt:'Hi'
+    }
+  ]);
   
   useEffect(() => {
     //@ts-ignore
