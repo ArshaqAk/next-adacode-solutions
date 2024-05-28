@@ -29,7 +29,7 @@ const signIn = (email, password) => {
 const signOutCurrentUser = () => {
   signOut(auth)
     .then(() => {
-      window.alert("User Signed Out");
+      alert("User Signed Out");
     })
     .catch((error) => console.log(error));
 };

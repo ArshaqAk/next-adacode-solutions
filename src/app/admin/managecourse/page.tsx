@@ -26,7 +26,7 @@ export default ManageCourse
 
 const AddNewCourseModal = () =>{
   const handleSubmit = () =>{
-    window.alert('Course Added Successfully')
+  alert('Course Added Successfully')
   } 
   return(
   <div className="addcourse_modal">

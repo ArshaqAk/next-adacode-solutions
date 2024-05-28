@@ -1,4 +1,3 @@
-"use client"
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useState, useEffect } from "react";
@@ -6,21 +5,24 @@ import { CustomDrawer, MiniHeader } from ".";
 import Link from "next/link";
 import logolight from "../assets/logo-light.png";
 import Image from "next/image";
-function Header() {
-  const [phoneActive, setPhoneActive] = useState<boolean>(
-    window && window.innerWidth < 1100,
-  );
 
-  const resizeHandler = () => {
-    setPhoneActive(window.innerWidth < 960);
-  };
+function Header() {
+  const [phoneActive, setPhoneActive] = useState<boolean>(false);
 
   useEffect(() => {
-    window.addEventListener("resize", resizeHandler);
-
-    return () => {
-      window.removeEventListener("resize", resizeHandler);
+    const resizeHandler = () => {
+      setPhoneActive(window.innerWidth < 960);
     };
+
+    // Check if window object exists before attaching event listener
+    if (typeof window !== "undefined") {
+      setPhoneActive(window.innerWidth < 960);
+      window.addEventListener("resize", resizeHandler);
+
+      return () => {
+        window.removeEventListener("resize", resizeHandler);
+      };
+    }
   }, []);
 
   return (

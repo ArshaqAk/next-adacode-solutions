@@ -13,9 +13,11 @@ interface StudentDataProps {
 }
 
 function StudentList() {
+  //@ts-ignore
   const [studentList, setStudentList] = useState<StudentDataProps[]>([]);
   
   useEffect(() => {
+    //@ts-ignore
     const fetchDocs = async () => {
       try {
         const q = query(
