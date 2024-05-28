@@ -1,3 +1,4 @@
+"use client"
 import AdminSidebar from "../adminsidebar/page"
 function GalleryManager() {
   return (
