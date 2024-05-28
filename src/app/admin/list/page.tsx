@@ -34,7 +34,7 @@ const List: React.FC<Props> = ({ studentList }) => {
           </tr>
         </thead>
         <tbody>
-          {studentList.map((item, index) => (
+          {/* {studentList.map((item, index) => (
             <tr key={index}>
               <td>{index}</td>
               <td>{item.studentname}</td>
@@ -62,7 +62,7 @@ const List: React.FC<Props> = ({ studentList }) => {
                 </button>
               </td>
             </tr>
-          ))}
+          ))} */}
         </tbody>
       </table>
     </div>
