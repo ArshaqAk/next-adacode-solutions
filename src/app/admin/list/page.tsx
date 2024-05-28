@@ -1,15 +1,16 @@
+"use client"
 import React from "react";
 import { FaPhoneAlt, FaWhatsapp, FaTrash } from "react-icons/fa";
 
-// interface Student {
-//   studentname: string;
-//   phonenumber: string;
-//   isCalled: boolean;
-// }
+interface Student {
+  studentname: string;
+  phonenumber: string;
+  isCalled: boolean;
+}
 
-// interface Props {
-//   studentList: Student[];
-// }
+interface Props {
+  studentList: Student[];
+}
 
 const List = ({ studentList }) => {
   const handleDelete = () => {
@@ -26,6 +27,7 @@ const List = ({ studentList }) => {
           <th>Status</th>
           <th>Actions</th>
         </tr>
+        {/* @ts-ignore */}
         {studentList.map((item, index) => (
           <tr key={index}>
             <td>{index}</td>

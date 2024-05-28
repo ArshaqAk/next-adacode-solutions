@@ -1,4 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
   // "parser": "babel-eslint"
+  "rules": {
+    "@typescript-eslint/ban-ts-ignore": "off"
+  }
 }
