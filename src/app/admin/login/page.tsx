@@ -2,13 +2,18 @@
 import { useRouter } from "next/navigation";
 import { signIn } from "../../Helpers/firebaseAuth.js";
 import { useState } from "react";
+import { middleware } from "../../../middleware.js";
+
 
 interface FirebaseUser {
   uid: string;
   email: string;
 }
 
+let userstate: FirebaseUser | undefined; 
+
 function Login() {
+
   const router=useRouter()
   const [formData, setFormData] = useState({
     email: "",
@@ -28,6 +33,7 @@ function Login() {
   const handleSignIn = () => {
     signIn(formData.email, formData.password)
       .then((user: FirebaseUser | undefined) => {
+        console.log(user)
         console.log("User signed in:", user);
         router.push("/admin/studentlist");
       })
@@ -71,4 +77,5 @@ function Login() {
   );
 }
 
-export default Login;
+export default Login
+export { userstate };

@@ -16,14 +16,7 @@ interface StudentDataProps {
 
 function StudentList() {
   //@ts-ignore
-  const [studentList, setStudentList] = useState<StudentDataProps[]>([
-    {
-      studentname:'arshaq',
-      phonenumber:'9123562120',
-      isCalled:true,
-      createdAt:'Hi'
-    }
-  ]);
+  const [studentList, setStudentList] = useState<StudentDataProps[]>([]);
   
   useEffect(() => {
     //@ts-ignore
@@ -46,7 +39,7 @@ function StudentList() {
           });
         });
         setStudentList(newStudentData);
-        console.log(studentList)
+        console.log(studentList,'student list')
       } catch (e) {
         console.error("Error", e);
       }

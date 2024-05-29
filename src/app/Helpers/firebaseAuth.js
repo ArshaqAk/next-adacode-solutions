@@ -1,7 +1,8 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { signOut } from "firebase/auth";
+import { app } from "./firebaseHelper";
 
-// const auth = getAuth();
+const auth = getAuth(app);
 let user;
 
 if (user) {

@@ -10,6 +10,7 @@ import Companies from "./components/Companies";
 import Testimonials from "./components/Testimonials";
 import NewUpdates from "./components/NewUpdates";
 import Faq from "./components/Faq"
+
 export default function Home() {
   return (
     <Layout>
