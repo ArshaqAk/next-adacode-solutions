@@ -7,37 +7,31 @@ import List from "../list/page";
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation'
 
-
-
 interface StudentDataProps {
-
   studentname: string;
   phonenumber: string;
   isCalled: boolean;
   createdAt: string | number;
 }
 
-
 function StudentList() {
   const router = useRouter();
-  
+
   const handleSignout = () => {
     Cookies.set('userState', 'false');
     alert('SignOut Successful');
     router.push('/', { scroll: false });
   };
-  //@ts-ignore
-  const [studentList, setStudentList] = useState<StudentDataProps[]>([]);
-  
+
+  const [studentList, setStudentList] = useState<StudentDataProps[] | undefined>(undefined);
+
   useEffect(() => {
-    //@ts-ignore
     const fetchDocs = async () => {
       try {
         const q = query(
           collection(db, "students"),
           orderBy("createdAt", "desc"),
         );
-        console.log(q)
         const querySnapshot = await getDocs(q);
         const newStudentData: StudentDataProps[] = [];
         querySnapshot.forEach((doc) => {
@@ -50,7 +44,6 @@ function StudentList() {
           });
         });
         setStudentList(newStudentData);
-        console.log(studentList,'student list')
       } catch (e) {
         console.error("Error", e);
       }
@@ -58,20 +51,18 @@ function StudentList() {
     fetchDocs();
   }, []);
 
-
   return (
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
-        {studentList.length > 0 ? <List studentList={studentList} /> : null}
-                    {/* signout sec */}
-      <div className="signout_div" >
-        <button className="signout-btn" onClick={handleSignout}>SignOut</button>
+        {studentList && studentList.length > 0 ? <List studentList={studentList} /> : <p>Loading...</p>}
+        {/* signout sec */}
+        <div className="signout_div" >
+          <button className="signout-btn" onClick={handleSignout}>SignOut</button>
+        </div>
       </div>
-      </div>
-
-
     </div>
   );
 }
+
 export default StudentList;
