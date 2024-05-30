@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useEffect, useState } from "react";
 import AdminSidebar from "../adminsidebar/page";
 import { db } from "../../Helpers/firebaseFirestore";
@@ -23,7 +23,7 @@ function StudentList() {
     router.push('/', { scroll: false });
   };
 
-  const [studentList, setStudentList] = useState<StudentDataProps[] | undefined>(undefined);
+  const [studentList, setStudentList] = useState<StudentDataProps[]>([]);
 
   useEffect(() => {
     const fetchDocs = async () => {
@@ -55,7 +55,11 @@ function StudentList() {
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
-        {studentList && studentList.length > 0 ? <List studentList={studentList} /> : <p>Loading...</p>}
+        {studentList.length > 0 ? (
+          <List studentList={studentList} />
+        ) : (
+          <p>Loading...</p>
+        )}
         {/* signout sec */}
         <div className="signout_div" >
           <button className="signout-btn" onClick={handleSignout}>SignOut</button>
