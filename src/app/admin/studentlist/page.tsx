@@ -6,6 +6,7 @@ import { getDocs, collection, query, orderBy } from "firebase/firestore";
 import List from "../list/page";
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation'
+import { FaPhoneAlt, FaWhatsapp, FaTrash } from "react-icons/fa";
 
 interface StudentDataProps {
   studentname: string;
@@ -13,8 +14,16 @@ interface StudentDataProps {
   isCalled: boolean;
   createdAt: string | number;
 }
+// interface Props {
+//   studentList: Student[] | undefined; 
+// }
 
 function StudentList() {
+  const handleDelete = (index: number) => {
+    console.log("Delete");
+  };
+  // const handleStatus = (item: Student) => {};
+
   const router = useRouter();
 
   const handleSignout = () => {
@@ -68,7 +77,52 @@ function StudentList() {
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
-        <List studentList={studentList} />
+        {/* <List studentList={studentList} /> */}
+        <div className="studentlist_container">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Student Name</th>
+            <th>Phone Number</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {studentList.map((item, index) => (
+            <tr key={index}>
+              <td>{index}</td>
+              <td>{item.studentname}</td>
+              <td>{item.phonenumber}</td>
+              <td>{item.isCalled ? <>Called</> : <>Not Called</>}</td>
+              <td className="table_icons_container">
+                <a href={`tel:+91${item.phonenumber}`}>
+                  <button
+                    className="phone-icon"
+                    // onClick={() => handleStatus(item)}
+                  >
+                    <FaPhoneAlt />
+                  </button>
+                </a>
+                <a href={`http://wa.me/91${item.phonenumber}`}>
+                  <button className="whatsapp-icon">
+                    <FaWhatsapp />
+                  </button>
+                </a>
+                <button
+                  onClick={() => handleDelete(index)}
+                  className="delete-icon"
+                >
+                  <FaTrash />
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
         {/* signout sec */}
         <div className="signout_div" >
           <button className="signout-btn" onClick={handleSignout}>SignOut</button>
