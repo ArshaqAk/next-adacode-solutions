@@ -9,17 +9,22 @@ interface Student {
 }
 
 interface Props {
-  studentList: Student[];
+  studentList: Student[] | undefined; // Allow studentList to be undefined
 }
 
 const List: React.FC<Props> = ({ studentList }) => {
-  console.log(studentList,'student data');
+  console.log(studentList, 'student data');
 
   const handleDelete = (index: number) => {
     console.log("Delete");
   };
 
   const handleStatus = (item: Student) => {};
+
+  // Check if studentList is undefined, return null if it is
+  if (studentList === undefined) {
+    return null; // or you can render a message like <p>No students available.</p>
+  }
 
   return (
     <div className="studentlist_container">
