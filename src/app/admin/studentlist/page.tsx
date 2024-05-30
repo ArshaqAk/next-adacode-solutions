@@ -68,11 +68,7 @@ function StudentList() {
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
-        {studentList.length > 0 ? ( 
-          <List studentList={studentList} />
-        ) : (
-          <p>No students found.</p>
-        )}
+      {studentList !== undefined && <List studentList={studentList} />}
         {/* signout sec */}
         <div className="signout_div" >
           <button className="signout-btn" onClick={handleSignout}>SignOut</button>
