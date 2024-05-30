@@ -24,6 +24,8 @@ function StudentList() {
   };
 
   const [studentList, setStudentList] = useState<StudentDataProps[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchDocs = async () => {
@@ -44,21 +46,32 @@ function StudentList() {
           });
         });
         setStudentList(newStudentData);
+        setLoading(false);
       } catch (e) {
-        console.error("Error", e);
+        console.error("Error fetching documents: ", e);
+        setError("Failed to load student data.");
+        setLoading(false);
       }
     };
     fetchDocs();
   }, []);
 
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>; 
+  }
+
   return (
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
-        {studentList.length > 0 ? (
+        {studentList.length > 0 ? ( 
           <List studentList={studentList} />
         ) : (
-          <p>Loading...</p>
+          <p>No students found.</p>
         )}
         {/* signout sec */}
         <div className="signout_div" >
