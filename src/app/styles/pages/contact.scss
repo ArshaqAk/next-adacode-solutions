@@ -5,6 +5,15 @@
   padding: 4rem 1rem 4rem 1rem;
   background-color:var( --tertiary-color) ;
 
+  .contact_content_container{
+    display: flex;
+    gap: 2.5rem;
+    iframe{
+      border: none;
+      width: 20rem;
+      height: 12rem;
+    }
+  }
 
   h1 {
     color: var(--heading-color);
@@ -57,8 +66,24 @@
 
 @media screen and (max-width:850px) {
   .contact_container {
+    .contact_content_container{
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+
+      .map_container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        iframe{
+          border: none;
+          width: 22rem;
+          height: 12rem;
+        }
+      }
+
+    }
     form {
-      width: 100%;
       padding: 1rem;
     }
   }

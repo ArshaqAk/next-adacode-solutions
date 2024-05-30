@@ -4,6 +4,10 @@ import AdminSidebar from "../adminsidebar/page";
 import { db } from "../../Helpers/firebaseFirestore";
 import { getDocs, collection, query, orderBy } from "firebase/firestore";
 import List from "../list/page";
+import Cookies from 'js-cookie';
+import { useRouter } from 'next/navigation'
+
+
 
 interface StudentDataProps {
 
@@ -15,6 +19,13 @@ interface StudentDataProps {
 
 
 function StudentList() {
+  const router = useRouter();
+  
+  const handleSignout = () => {
+    Cookies.set('userState', 'false');
+    alert('SignOut Successful');
+    router.push('/', { scroll: false });
+  };
   //@ts-ignore
   const [studentList, setStudentList] = useState<StudentDataProps[]>([]);
   
@@ -53,7 +64,13 @@ function StudentList() {
       <AdminSidebar />
       <div className="right_pane">
         {studentList.length > 0 ? <List studentList={studentList} /> : null}
+                    {/* signout sec */}
+      <div className="signout_div" >
+        <button className="signout-btn" onClick={handleSignout}>SignOut</button>
       </div>
+      </div>
+
+
     </div>
   );
 }

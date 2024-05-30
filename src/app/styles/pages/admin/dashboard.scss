@@ -1,8 +1,13 @@
-.dashboard_container {
-  display: flex;
-  gap: 3rem;
+.dashboard_container{
+  .dashboard_container {
+    display: flex;
+    gap: 3rem;
+  }
+  
+  .dashboard_right {
+    padding-top: 2rem;
+  }
+  
 }
 
-.dashboard_right {
-  padding-top: 2rem;
-}
+
